@@ -64,9 +64,16 @@
                 class="show-section"
                 :ref="el => registerSectionRef(show.slug, el)"
             >
-                <h2 class="show-title">{{ show.name }}</h2>
+                <div class="show-title-wrap">
+                    <h2 class="show-title">{{ show.name }}</h2>
+                </div>
 
-                <img class="show-poster" :src="show.poster_image" :alt="show.name">
+                <div class="show-poster-wrap" @click="setView('characters')">
+                    <img class="show-poster" :src="show.poster_image" :alt="show.name">
+                    <div class="show-poster-overlay">
+                        <span>View Characters</span>
+                    </div>
+                </div>
 
                 <div v-if="currentView === 'characters'" class="character-grid">
                     <div
@@ -90,10 +97,12 @@
 
         <div v-else-if="selectedCharacter" id="info-box">
             <img :src="selectedCharacter.character_image" :alt="selectedCharacter.name">
-            <p><span class="title">Name:</span> {{ selectedCharacter.name }}</p>
-            <p><span class="title">Show:</span> {{ selectedCharacter.show_name }}</p>
-            <p><span class="title">Type:</span> {{ selectedCharacter.type }}</p>
-            <p><span class="title">Description:</span> {{ selectedCharacter.description }}</p>
+            <div class="info-text">
+                <p><span class="title">Name:</span> {{ selectedCharacter.name }}</p>
+                <p><span class="title">Show:</span> {{ selectedCharacter.show_name }}</p>
+                <p><span class="title">Type:</span> {{ selectedCharacter.type }}</p>
+                <p><span class="title">Description:</span> {{ selectedCharacter.description }}</p>
+            </div>
         </div>
     </section>
 
