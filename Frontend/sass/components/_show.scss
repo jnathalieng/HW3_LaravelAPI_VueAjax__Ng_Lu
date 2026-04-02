@@ -1,0 +1,12 @@
+.show-card {
+    background-color: $white;
+    border: 2px solid $black;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.show-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
