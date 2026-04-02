@@ -1,12 +1,21 @@
+@use '../abstracts' as *;
+
 .site-footer {
     background-color: $black;
     color: $white;
     text-align: center;
-    padding: 20px 0;
+    padding: 24px 0;
     font-family: $body-font;
     font-size: 14px;
-}
+    margin-bottom: 0;
 
-.site-footer p {
-    margin: 0;
+    img {
+        max-height: 50px;
+        width: auto;
+        display: inline-block;
+    }
+
+    p {
+        margin: 0;
+    }
 }
