@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('shows', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('year');
-            $table->text('description');
-            $table->string('slug');
-            $table->string('poster_image')->nullable();
+            $table->string('name'); // show title
+            $table->integer('year'); // use integer since year is a number
+            $table->text('description'); // text allows longer content than string
+            $table->string('slug'); // used for frontend filtering
+            $table->string('poster_image')->nullable(); // nullable in case no image is set
             $table->timestamps();
         });
     }

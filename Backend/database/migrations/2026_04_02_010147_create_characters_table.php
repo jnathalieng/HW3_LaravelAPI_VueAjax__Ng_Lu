@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('characters', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('type');
-            $table->text('description');
-            $table->bigInteger('show_id')->nullable();
-            $table->string('character_image')->nullable();      
+            $table->string('name'); // store the character name here
+            $table->string('type'); // use this to categorize characters as hero, villain, or side
+            $table->text('description'); // text to allow longer character descriptions
+            $table->bigInteger('show_id')->nullable(); // foreign key linking to shows table
+            $table->string('character_image')->nullable(); // store the relative image path here
             $table->timestamps();
         });
     }
