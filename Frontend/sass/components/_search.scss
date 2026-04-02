@@ -1,0 +1,36 @@
+.top-controls {
+    background-color: $nav-orange;
+    padding: 20px 0;
+}
+
+.top-controls form {
+    text-align: center;
+}
+
+.top-controls input,
+.top-controls button,
+.top-controls select {
+    font-family: $body-font;
+    font-size: 16px;
+    border: 2px solid $black;
+    padding: 10px 14px;
+}
+
+.top-controls input {
+    width: 280px;
+    max-width: 100%;
+    background-color: $white;
+    color: $black;
+}
+
+.top-controls button {
+    background-color: $black;
+    color: $white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.top-controls button:hover {
+    background-color: $white;
+    color: $black;
+}
