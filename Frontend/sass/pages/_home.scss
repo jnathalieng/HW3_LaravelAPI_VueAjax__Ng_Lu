@@ -28,6 +28,11 @@
         flex-shrink: 0;
     }
 
+    .info-text {
+        flex: 1;
+        min-width: 200px;
+    }
+
     p {
         margin-bottom: 10px;
         font-size: 15px;
@@ -36,6 +41,20 @@
         .title {
             font-weight: 600;
             margin-right: 6px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 120px;
+            height: 120px;
+        }
+
+        p {
+            font-size: 14px;
         }
     }
 }
@@ -60,3 +79,4 @@
     font-weight: 600;
     margin: 20px;
 }
+
