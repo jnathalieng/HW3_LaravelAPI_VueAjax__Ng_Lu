@@ -7,3 +7,20 @@
 @use 'base';
 @use 'components';
 @use 'pages';
+
+
+section {
+    margin-bottom: 60px;
+}
+
+.show-section {
+    margin-bottom: 80px;
+}
+
+.show-section h2 {
+    margin-bottom: 20px;
+}
+
+.grid-con {
+    margin-bottom: 40px;
+}
