@@ -8,6 +8,13 @@
     padding: 8px 18px;
     display: inline-block;
     position: relative;
+    text-align: center;
+}
+
+.show-title-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 /* colored shadows that is behind the title */

@@ -2,15 +2,57 @@
 
 .show-section {
     padding: 0 20px;
+    text-align: center;
+}
+
+// Poster wrapper for hover overlay effect
+.show-poster-wrap {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    border: $border;
+    margin-bottom: 20px;
+
+    &:hover .show-poster-overlay {
+        opacity: 1;
+    }
+
+    &:hover .show-poster {
+        transform: scale(1.04);
+        filter: brightness(0.6);
+    }
 }
 
 .show-poster {
     width: 100%;
     max-height: 340px;
     object-fit: cover;
-    border: $border;
     display: block;
-    margin-bottom: 20px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+// Overlay hint shown on poster hover
+.show-poster-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    span {
+        background-color: $black;
+        color: $white;
+        font-family: $heading-font;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        padding: 10px 24px;
+        border: 2px solid $white;
+        text-transform: uppercase;
+    }
 }
 
 .show-card {
