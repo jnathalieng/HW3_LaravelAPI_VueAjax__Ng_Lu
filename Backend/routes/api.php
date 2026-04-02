@@ -1,8 +1,10 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShowController;
+use App\Http\Controllers\CharacterController;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+// Register all RESTful routes for shows
+Route::apiResource('shows', ShowController::class);
+// Register all RESTful routes for characters
+Route::apiResource('characters', CharacterController::class);
