@@ -1,20 +1,8 @@
 const API_BASE = "http://127.0.0.1:8000/api";
-const API_ROOT = API_BASE.replace("/api", "");
 
 function buildImagePath(path) {
-    if (!path) {
-        return "";
-    }
-
-    if (path.startsWith("http://") || path.startsWith("https://")) {
-        return path;
-    }
-
-    if (path.startsWith("/")) {
-        return `${API_ROOT}${path}`;
-    }
-
-    return `${API_ROOT}/${path}`;
+    if (!path) return "";
+    return path;
 }
 
 Vue.createApp({
