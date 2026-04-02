@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+//have to include all of these otherwise main.css will be empty
+//We do not create styles in here
+
+@use 'abstracts';
+@use 'base';
+@use 'components';
+@use 'pages';
+
+
+section {
+    margin-bottom: 60px;
+}
+
+.show-section {
+    margin-bottom: 80px;
+}
+
+.show-section h2 {
+    margin-bottom: 20px;
+}
+
+.grid-con {
+    margin-bottom: 40px;
+}
